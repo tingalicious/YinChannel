@@ -207,6 +207,8 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				verticalCentered: true,
+				autoScrolling: false,
+				menu: '#menu',
 				slidesNavigation: true,
 				scrollBar: true,
 				sectionsColor: ['#ffffff', '#C63DOF', '#1BBC9B', '#7E8F7C', '#009cef']
@@ -217,9 +219,15 @@
 </head>
 <body>
 
-<div id="header">
+<!--<div id="header">
 <p><b><i><font face="Times New Roman Bold"><a href="index.html" title="home">YinChannel</a></font></i> | <font face="Arial"> <a href="about.html">About</a><span style="Float:right; color:#a9a9a9">Scroll to explore!</span></font></b></p>
-</div>
+</div> -->
+
+<ul id="menu">
+	<li data-menuanchor="section0"><a href="index.html">YinChannel </a> </li>
+	<li data-menuanchor="section1"><a href="about.html">About</a></li>
+</ul>
+
 <div id="fullpage">
 	<div class="section " id="section0">
 		<div class="slide" id="introSlide">

@@ -222,7 +222,7 @@
 			$('#fullpage').fullpage({
 				verticalCentered: false,
 				anchors: ['firstPage', 'secondPage', '3rdPage'],
-				sectionsColor: ['#7E8F7C', '#1BBC9B', '#7E8F7C'],
+				sectionsColor: ['#1BBC9B', '#009cef', '#7E8F7C', '#7E8F7C'],
 				css3: true
 			});
 		});
@@ -231,14 +231,22 @@
 </head>
 <body>
 
-<div id="header">
+<!--<div id="header">
 <p><b><i><font face="Times New Roman Bold"><a href="index.html" title="home">YinChannel</a></font></i> | <a href="about.html" title="about">About</a><span style="Float:right; color:#a9a9a9">Scroll to explore!</span></b></p>
-</div>
+</div> -->
+
+<ul id="menu">
+	<li data-menuanchor="section0"><a href="index.html">YinChannel </a> </li>
+	<li data-menuanchor="section1"><a href="about.html">About</a></li>
+</ul>
+
 <div id="fullpage">
 	<div class="section " id="section0">
 		<div class="intro">
 			<h1>What is YinChannel?</h1>
 			<p>TL;DR: YinChannel helps new content creators figure out what they're doing and attract new followers.</p>
+			</br>
+			<!--TODO: add email/contact info here -->
 			<p>YinChannel is a reboot of the original YinChannel site created in 2011 that was originally an imageboard designed to share user-created content within a small network. The new format reduces the facilitation of individual pieces of user-generated content in favor of aggregating each individual's independent content collections. The goal is to help our content creators more easily reach out to their userbases while remaining independent, while supporting those who want to learn how to become content creators by helping promote new content creators. Support provided by fellow content creators is, after all, the best way to bind a community!</p>
 				<div class="photobanner">
                     <a href="https://flic.kr/s/aHskn8MCdX" title="New York Comic Con Day 1"><img class="first" src="imgs/sylveon.jpg" alt="" height="233"></a>
