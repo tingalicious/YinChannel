@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>YinChannel</title>
+	<meta name="author" content="Ying-Ting Chen" />
+	<meta name="description" content="Media redirection channel" />
+	<meta name="keywords"  content="Redirection for all media related to Yinchannel" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+	h2{
+		font-size: 4em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+	a{
+		color: #A9A9A9;
+	}
+	a:hover {
+		color:#D3D3D3;
+	}
+	#container {
+	width:1000px;
+	overflow: hidden;
+	margin: 50px auto;
+	
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Fixed header and footer.
+	* --------------------------------------- */
+	#header, #footer{
+		position:fixed;
+		display:block;
+		width: 100%;
+		background: #333;
+		z-index:9;
+		text-align:left;
+		color: #f2f2f2;
+	}
+
+	#header{
+		top:0px;
+		height: 50px;
+		padding: 20px 0 0 0;
+	}
+	#footer{
+		bottom:0px;
+		height: 20px;
+		padding: 0px 0 0 0;
+	}
+	
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	.section{
+		background-size: cover;
+	}
+	.slide{
+		background-size: cover;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section0{
+		padding: 6% 0 0 0;
+	}
+	#section1{
+		background-image: url(imgs/barrtrail.jpg);
+		padding: 6% 0 0 0;
+		background-position: left;
+	}
+	#section2{
+		padding: 6% 0 0 0;
+	}
+	#section3 h1{
+		color: #000;
+	}
+
+	/* Overwriting styles for the navigation dots (to place it where we want)
+	* --------------------------------------- */
+	.fp-slidesNav.bottom{
+		bottom: 25px;
+	}
+	/*photobanner class*/
+	 
+	.photobanner {
+		height: 233px;
+		width: 4050px;
+		margin-bottom: 80px;
+	}
+	/*keyframe animations*/
+	.first {
+		-webkit-animation: bannermove 30s linear infinite;
+		   -moz-animation: bannermove 30s linear infinite;
+			-ms-animation: bannermove 30s linear infinite;
+			 -o-animation: bannermove 30s linear infinite;
+				animation: bannermove 30s linear infinite;
+	}
+	 
+	@keyframes "bannermove" {
+	 0% {
+		margin-left: 0px;
+	 }
+	 100% {
+		margin-left: -4250px;
+	 }
+	 
+	}
+	 
+	@-moz-keyframes bannermove {
+	 0% {
+	   margin-left: 0px;
+	 }
+	 100% {
+	   margin-left: -4250px;
+	 }
+	 
+	}
+	 
+	@-webkit-keyframes "bannermove" {
+	 0% {
+	   margin-left: 0px;
+	 }
+	 100% {
+	   margin-left: -4250px;
+	 }
+	 
+	}
+	 
+	@-ms-keyframes "bannermove" {
+	 0% {
+	   margin-left: 0px;
+	 }
+	 100% {
+	   margin-left: -4250px;
+	 }
+	 
+	}
+	 
+	@-o-keyframes "bannermove" {
+	 0% {
+	   margin-left: 0px;
+	 }
+	 100% {
+	   margin-left: -4250px;
+	 }
+	 
+	}
+	.photobanner {
+		height: 233px;
+		width: 4050px;
+		margin-bottom: 80px;
+	}
+	 
+	.photobanner img {
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	 
+	.photobanner img:hover {
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		transform: scale(1.1);
+		cursor: pointer;
+	 
+		-webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+		box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+	}
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				verticalCentered: false,
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				sectionsColor: ['#7E8F7C', '#1BBC9B', '#7E8F7C'],
+				css3: true
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="header">
+<p><b><i><font face="Times New Roman Bold"><a href="index.html" title="home">YinChannel</a></font></i> | <a href="about.html" title="about">About</a> | <a href="mailto:tingy0314@gmail.com">Contact</a><span style="Float:right; color:#a9a9a9">Scroll to explore!</span></b></p>
+</div>
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<h1>What is YinChannel?</h1>
+			<p>TL;DR: YinChannel helps new content creators figure out what they're doing and attract new followers.</p>
+			<p>YinChannel is a reboot of the original YinChannel site created in 2011 that was originally an imageboard designed to share user-created content within a small network. The new format reduces the facilitation of individual pieces of user-generated content in favor of aggregating each individual's independent content collections. The goal is to help our content creators more easily reach out to their userbases while remaining independent, while supporting those who want to learn how to become content creators by helping promote new content creators. Support provided by fellow content creators is, after all, the best way to bind a community!</p>
+				<div class="photobanner">
+                    <a href="https://flic.kr/s/aHskn8MCdX" title="New York Comic Con Day 1"><img class="first" src="imgs/sylveon.jpg" alt="" height="233"></a>
+                    <a href="twitch.tv/notearsonlystreamsnow" title="Cosplay & Cooking"><img src="imgs/leftshark.jpg" alt="" height="233"></a>
+                    <img src="imgs/lcs.jpg" alt="" height="233">
+                    <img src="imgs/hamuko.jpg" alt="" height="233">
+                    <img src="imgs/statefair.jpg" alt="" height="233">
+                    <img src="imgs/missa.jpg" alt="" height="233">
+                    <img src="imgs/sylveon.jpg" alt="" height="233">
+                    <img src="imgs/leftshark.jpg" alt="" height="233">
+					<img src="imgs/lcs.jpg" alt="" height="233">
+					<img src="imgs/hamuko.jpg" alt="" height="233">
+					<img src="imgs/statefair.jpg" alt="" height="233">
+                </div>
+		</div>
+	</div>
+<!--
+	<div class="section" id="section1">
+	    <h1 style="color:#181818">The mind behind the persona</h1>
+		<p style="color:#181818">An avid backpacker, computer programmer, racecar driver, cosplayer, doodler, photographer, and all-around hobbyist, I tend to get out a lot. Feel free to contact me if you're just looking for things to do!</p>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Professional Projects</h1>
+			<p>As an experienced developer that has worked extensively in business systems, I have completed multiple projects for firms looking to implement SAP SuccessFactors HCM, Oracle PeopleSoft CRM, and Trailblazer. Contact me on linkedIn for more information!</p>
+			<a href="https://www.linkedin.com/pub/ying-ting-chen/1b/249/986" title="connect with me on linkedin"><img src="imgs/linkedin.png" width="147" alt="" align="middle"></a>
+		</div>
+	</div>
+	-->
+<!--	<div class="section" id="section3"><h1>One Image = One thousand words</h1></div> -->
+</div>
+
+	<div id="footer">
+	&copy Copyright Ying-Ting Chen 2015 | This section still under construction <span style="Float:right;"> tingy0314@gmail.com </span>
+	</div>
+</body>
+</html>
