@@ -104,7 +104,7 @@
 		padding 0% 0 0 0;
 	}
 	#slide0{
-		background-image: url();
+		background-image: url(imgs/photo.jpg);
 		background-position: center;
 		padding 0% 0 0 0;
 	}
@@ -155,6 +155,26 @@
 		background-position: center;
 		padding: 0% 0 0 0;
 	}
+	#chanlandFacebook{
+		background-image:url(imgs/chanland.jpg);
+		background-position: center;
+		padding: 0% 0 0 0;
+	}
+	#yinchannelFacebook{
+		background-image:url(imgs/sylveon.jpg);
+		background-position: center;
+		padding: 0% 0 0 0;
+	}
+	#frequentContacts{
+		background-image:url(imgs/frequentcontacts.jpg);
+		background-position: center;
+		padding: 0% 0 0 0;
+	}
+	#artHome{
+		background-image:url(imgs/Coast.jpg);
+		background-position: center;
+		paddion: 0% 0 0 0;
+	}
 
 	/* Overwriting styles for the navigation dots (to place it where we want)
 	* --------------------------------------- */
@@ -168,6 +188,7 @@
 	#infoMenu li a {
 		color: #fff;
 	}
+	
 	</style>
 
 	<!--[if IE]>
@@ -186,6 +207,8 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				verticalCentered: true,
+				autoScrolling: false,
+				menu: '#menu',
 				slidesNavigation: true,
 				scrollBar: true,
 				sectionsColor: ['#ffffff', '#C63DOF', '#1BBC9B', '#7E8F7C', '#009cef']
@@ -196,9 +219,15 @@
 </head>
 <body>
 
-<div id="header">
-<p><b><i><font face="Times New Roman Bold"><a href="index.html" title="home">YinChannel</a></font></i> | <font face="Arial"> <a href="about.html">About</a> | <a href="mailto:tingy0314@gmail.com">Contact</a><span style="Float:right; color:#a9a9a9">Scroll to explore!</span></font></b></p>
-</div>
+<!--<div id="header">
+<p><b><i><font face="Times New Roman Bold"><a href="index.html" title="home">YinChannel</a></font></i> | <font face="Arial"> <a href="about.html">About</a><span style="Float:right; color:#a9a9a9">Scroll to explore!</span></font></b></p>
+</div> -->
+
+<ul id="menu">
+	<li data-menuanchor="section0"><a href="index.html">YinChannel </a> </li>
+	<li data-menuanchor="section1"><a href="about.html">About</a></li>
+</ul>
+
 <div id="fullpage">
 	<div class="section " id="section0">
 		<div class="slide" id="introSlide">
