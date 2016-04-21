@@ -59,7 +59,7 @@
 
 	/* Fixed header and footer.
 	* --------------------------------------- */
-	#header, #footer{
+	/*#header, #footer{
 		position:fixed;
 		display:block;
 		width: 100%;
@@ -67,7 +67,7 @@
 		z-index:9;
 		text-align:left;
 		color: #f2f2f2;
-	}
+	}*/
 
 	#header{
 		top:0px;
@@ -76,8 +76,14 @@
 	}
 	#footer{
 		bottom:0px;
-		height: 20px;
+		height: 88px;
 		padding: 0px 0 0 0;
+		display: block;
+		width: 100%;
+		background: #333;
+		z-index:9;
+		text-align:left;
+		color: #f2f2f2;
 	}
 	
 	/* Backgrounds will cover all the section
@@ -173,7 +179,40 @@
 	#artHome{
 		background-image:url(imgs/Coast.jpg);
 		background-position: center;
-		paddion: 0% 0 0 0;
+		padding: 0% 0 0 0;
+	}
+	#section-footer #footer-text{
+		width: 80%;
+		height: auto;
+		margin: 0 auto;
+			padding: 20px 0;
+	}
+	#cosplayHome{
+		background-image:url(imgs/cosplayProj.png);
+		background-position: center;
+		padding: 0% 0 0 0;
+	}
+	#videoHome{
+		background-image:url(imgs/videoproj.jpg);
+		background-position: center;
+		padding: 0% 0 0 0;
+	}
+	#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+
 	}
 
 	/* Overwriting styles for the navigation dots (to place it where we want)
@@ -207,6 +246,7 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				verticalCentered: true,
+				fitToSection: false,
 				autoScrolling: false,
 				menu: '#menu',
 				slidesNavigation: true,
@@ -224,7 +264,7 @@
 </div> -->
 
 <ul id="menu">
-	<li data-menuanchor="section0"><a href="index.html">YinChannel </a> </li>
+	<li data-menuanchor="section0"><a href="index.html">/YinChannel/</a> </li>
 	<li data-menuanchor="section1"><a href="about.html">About</a></li>
 </ul>
 
@@ -232,7 +272,7 @@
 	<div class="section " id="section0">
 		<div class="slide" id="introSlide">
 			<div class="intro">
-				<h1><font face="Brush Script MT"><i>#</i>YinChannel</font></h1>
+				<h1><font face="Brush Script MT">/YinChannel/</font></h1>
 				<p>Collecting Creativity</p>
 			</div>
 		</div>
@@ -364,9 +404,16 @@
 				<a href="http://www.frequentcontacts.blogspot.com" title="Follow us on Blogger"><img src="imgs/blogger.png" width="147" alt="" align="middle"></a>
 			</div>
 		</div>
-		<div id="footer">
-		&copy Copyright Ying-Ting Chen 2016 <span style="Float:right;"> tingy0314@gmail.com </span>
-		</div>
+	</div>
+	<div id="footer" class="section-footer" width="80%">
+	&copy Copyright Ying-Ting Chen 2016 <span style="Float:right;"> tingy0314@gmail.com </span>
+	</br>
+	</br>
+		<span style="Float:right;">
+			<a href="https://www.instagram.com/yingalicious"><img src="imgs/instagram.png" alt="" height="45"></a>
+			<a href="imgs/snapcodes.png"><img src="imgs/snapcodes.png" alt="" height="45"></a>
+			<a href="https://www.facebook.com/YinChannel/"><img src="imgs/fblogo.png" alt="" height="45"></a>
+		</span>
 	</div>
 
 </div>
