@@ -45,6 +45,37 @@
 	margin: 50px auto;
 	
 	}
+	.wrap{
+		margin-left: auto;
+		margin-right: auto;
+		width: 980px;
+		position: relative;
+		padding: 20px 0 20px 0;
+	}
+	.wrap h1{
+		font-size: 2.3em;
+		color: #333;
+		padding: 30px 0 10px  0;
+	}
+	.wrap p{
+		font-size: 16px;
+		padding:  0 0 10px 0;
+	}
+	.box{
+		display: block;
+		background: #f2f2f2;
+		border:1px solid #ccc;
+		padding: 20px;
+		margin:20px 0;
+	}
+	.box2{
+		text-align: left;
+		color: #808080;
+		font-size: 1.2em;
+		line-height: 1.6em;
+	}
+
+	
 
 	/* Centered texts in each section
 	* --------------------------------------- */
@@ -55,7 +86,7 @@
 	/* Fixed header and footer.
 	* --------------------------------------- */
 	#header, #footer{
-		position:fixed;
+		/*position:fixed;*/
 		display:block;
 		width: 100%;
 		background: #333;
@@ -88,6 +119,25 @@
 	* --------------------------------------- */
 	#section0{
 		padding: 6% 0 0 0;
+		overflow: hidden;
+	}
+	#section0 .imgsContainer{
+		display: block;
+		position: absolute;
+		z-index: 1;
+		left: 10%;
+		display: block;
+		width: 0;
+		height: 0;
+	}
+	#section0 .box{
+		position: absolute;
+		top: 10%;
+		left: 30%;
+		margin-top: 192px;
+		margin-left: 10%;
+		width: 395px;
+		z-index: 1;
 	}
 	#section1{
 		background-image: url(imgs/barrtrail.jpg);
@@ -221,8 +271,11 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				verticalCentered: false,
-				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				//anchors: ['firstPage', 'secondPage', '3rdPage'],
 				sectionsColor: ['#1BBC9B', '#009cef', '#7E8F7C', '#7E8F7C'],
+				scrollBar: false,
+				autoScrolling: false,
+				fitToSection: false,
 				css3: true
 			});
 		});
@@ -236,18 +289,18 @@
 </div> -->
 
 <ul id="menu">
-	<li data-menuanchor="section0"><a href="index.html">YinChannel </a> </li>
+	<li data-menuanchor="section0"><a href="index.html">/YinChannel/</a> </li>
 	<li data-menuanchor="section1"><a href="about.html">About</a></li>
 </ul>
 
 <div id="fullpage">
 	<div class="section " id="section0">
 		<div class="intro">
-			<h1>What is YinChannel?</h1>
+			<h1>What is /YinChannel/?</h1>
 			<p>TL;DR: YinChannel helps new content creators figure out what they're doing and attract new followers.</p>
 			</br>
 			<!--TODO: add email/contact info here -->
-			<p>YinChannel is a reboot of the original YinChannel site created in 2011 that was originally an imageboard designed to share user-created content within a small network. The new format reduces the facilitation of individual pieces of user-generated content in favor of aggregating each individual's independent content collections. The goal is to help our content creators more easily reach out to their userbases while remaining independent, while supporting those who want to learn how to become content creators by helping promote new content creators. Support provided by fellow content creators is, after all, the best way to bind a community!</p>
+			
 				<div class="photobanner">
                     <a href="https://flic.kr/s/aHskn8MCdX" title="New York Comic Con Day 1"><img class="first" src="imgs/sylveon.jpg" alt="" height="233"></a>
                     <a href="twitch.tv/notearsonlystreamsnow" title="Cosplay & Cooking"><img src="imgs/leftshark.jpg" alt="" height="233"></a>
@@ -262,6 +315,14 @@
 					<img src="imgs/statefair.jpg" alt="" height="233">
                 </div>
 		</div>
+		<!--<div class="wrap">
+			<div class="imgsContainer">
+				<img src="imgs/snapchat.jpg" alt="" width="200px"/>
+			</div>
+			<div class="box">
+				<p>Scroll down for more!</p>
+			</div>
+		</div> -->
 	</div>
 <!--
 	<div class="section" id="section1">
@@ -279,8 +340,29 @@
 <!--	<div class="section" id="section3"><h1>One Image = One thousand words</h1></div> -->
 </div>
 
+<div class="wrap">
+	<h1>What is this, really?</h1>
+	<p>YinChannel is a reboot of the original /YinChannel/ board from the chooperchannel site created in 2011 that was originally an imageboard designed to share user-created content within a small network. The new format reduces the facilitation of individual pieces of user-generated content in favor of aggregating each individual's independent content collections. The goal is to help our content creators more easily reach out to their userbases while remaining independent, while supporting those who want to learn how to become content creators by helping promote new content creators. Support provided by fellow content creators is, after all, the best way to bind a community!</p>
+	<h1>How can I join the channel?</h1>
+	<p>Get in touch with us! We're always looking for new content creators to join our channel and contribute to our network, so feel free to hop in, join the community, and leverage our awesome network of creative geniuses for whatever endeavors you may be undertaking!</p>
+		<div class="box">
+			<p>You can email our site admin at tingy0314@gmail.com for more information at the moment while we're rebuilding our network!</p>
+		</div>
+	<h1>Will the old imageboards ever make a return?</h1>
+	<p>Probably not. We're working every day to make our portal more and more responsive, and part of that effort involves dropping our old #chan style imageboards. Keep an eye out in the future for more ways to interact with our site and community as we build out our network though!</p>
+	<p>That's not ruling out a return of our imageboards sometime in the near future though. As we evaluate the different methods available to us with which to interact with our community, we may determine a return of the imageboards in some capacity to be the best solution!</p>
+		<div class="box">
+			<p>You can join us on #discord, #slack, or #irc at the following links to stay in touch!</p>
+			<ul> 
+				<li>@TODO: insert discord channel here </li>
+				<li>@TODO: insert slack channel here</li>
+				<li>@TODO: insert irc channel here</li>
+			</ul>
+		</div>
+</div>
+
 	<div id="footer">
-	&copy Copyright Ying-Ting Chen 2015 | This section still under construction <span style="Float:right;"> tingy0314@gmail.com </span>
+	&copy Copyright Ying-Ting Chen 2016 | This section still under construction <span style="Float:right;"> tingy0314@gmail.com </span>
 	</div>
 </body>
 </html>
